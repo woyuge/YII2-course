@@ -8,8 +8,11 @@
 namespace backend\controllers;
 
 use Yii;
+
 use yii\web\Controller;
+
 use backend\models\Person;
+
 class PostController extends controller{
 	public function actionIndex()
 	{
