@@ -2,10 +2,15 @@
 ***
 
 但是有些基础知识要弄懂，比如怎么自动加载引用的文件
+
 比如我们把行文类放到跟backend的同级目录下app/cove2/MyBehavior.php
+
 而我们在调用的时候却一直没法使用这个。提示class notfound.这点就需要去补补命名空间和yii2的自动加载的相关知识了。
+
 我是这么做的，首先记得这个东西吧yii2的公告文件夹下，设置别名的方法 在common/config/bootstrap.php中
+
 加上这么一句：Yii::setAlias('cove2', dirname(dirname(__DIR__)) . '/cove2');
+
 也就定义了这个路径的别名，所以你想要使用的时候，在相应的，文件用use cove2\MyBehavior;这段代码就能引用了
 
 
